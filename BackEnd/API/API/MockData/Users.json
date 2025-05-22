@@ -1,0 +1,14 @@
+[
+  {
+    "id": "714f02e8-9599-4199-9f5b-e1fd46c698ec",
+    "username": "user",
+    "password": "try",
+    "role": "patient"
+  },
+  {
+    "id": "81dd25c4-1304-40ea-bbb5-d0279af1bdbd",
+    "username": "user2",
+    "password": "try",
+    "role": "doctor"
+  }
+]
