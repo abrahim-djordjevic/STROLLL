@@ -47,6 +47,16 @@ public class Program
             });
         });
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowLocalhost", policy =>
+            {
+                policy.WithOrigins("http://localhost", "https://localhost")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
+        });
+        
         builder.Services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -78,7 +88,7 @@ public class Program
             app.UseSwaggerUI();
         }
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
 
         app.UseAuthentication();
 
