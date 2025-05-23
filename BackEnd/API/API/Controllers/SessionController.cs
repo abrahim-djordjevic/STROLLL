@@ -1,6 +1,7 @@
 using API.Models;
 using API.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -62,7 +63,7 @@ public class SessionController : ControllerBase
             return StatusCode(500);
         }
     }
-
+    
     [HttpPost("AddSession", Name = "AddSession")]
     public IActionResult AddSession([FromBody] Session session)
     {

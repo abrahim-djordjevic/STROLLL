@@ -5,6 +5,8 @@ public class Session
     public string Id { get; set; }
     public string PatientId { get; set; }
     public string RoutineId { get; set; }
+    public string PatientName { get; set; }
+    public string RoutineName { get; set; }
     public DateTime SessionStartTime { get; set; }
     public DateTime SessionEndTime { get; set; }
     public int UserRating { get; set; }

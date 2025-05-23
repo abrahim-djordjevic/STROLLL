@@ -51,7 +51,7 @@ public class Program
         {
             options.AddPolicy("AllowLocalhost", policy =>
             {
-                policy.WithOrigins("http://localhost", "https://localhost")
+                policy.WithOrigins("http://localhost", "https://localhost", "http://localhost:3100", "https://localhost:3100", "http://localhost:5095", "https://localhost:5095")
                     .AllowAnyHeader()
                     .AllowAnyMethod();
             });
@@ -88,6 +88,7 @@ public class Program
             app.UseSwaggerUI();
         }
 
+        app.UseCors("AllowLocalhost");
         //app.UseHttpsRedirection();
 
         app.UseAuthentication();
