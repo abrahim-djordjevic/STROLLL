@@ -1,0 +1,17 @@
+.routine-page-body {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.routine-page-chart-container,
+.routine-page-table-container {
+    border:1px solid gray;
+    border-radius:5px;   
+    margin-bottom: 15px;
+}
+
+.chart-header,
+.table-header {
+    display: flex;
+    padding: 5px;
+}
